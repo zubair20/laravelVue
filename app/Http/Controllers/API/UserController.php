@@ -138,4 +138,23 @@ class UserController extends Controller
         $user->update($request->all());
         return ['message','User Updated '];
     }
+
+    public function search(){
+
+        //$users = User::all();
+        if ($search = \Request::get('q')) {
+            $users = User::where(function($query) use ($search){
+                $query->where('name', 'LIKE', '%'. $search.'%')
+                    ->orWhere('email', 'LIKE', '%'. $search .'%')
+                    ->orWhere('type', 'LIKE', '%'. $search .'%');
+            })->paginate(5);
+            //$users = User::paginate(5);
+        }else{
+
+            $users = User::latest()->paginate(5);
+        }
+
+        return $users;
+        
+    }
 }
