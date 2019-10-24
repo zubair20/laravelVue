@@ -31495,7 +31495,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_5_vue_progressbar___default.a, {
     height: '3px'
 });
 
-var routes = [{ path: '/dashboard', component: __webpack_require__(176) }, { path: '/developer', component: __webpack_require__(179) }, { path: '/users', component: __webpack_require__(182) }, { path: '/profile', component: __webpack_require__(185) }];
+var routes = [{ path: '/dashboard', component: __webpack_require__(176) }, { path: '/developer', component: __webpack_require__(179) }, { path: '/users', component: __webpack_require__(182) }, { path: '/profile', component: __webpack_require__(185) }, { path: '*', component: __webpack_require__(224) }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_4_vue_router__["a" /* default */]({
     mode: 'history',
@@ -77333,7 +77333,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("img", {
             staticClass: "mt-4",
-            attrs: { src: "img/notfound.svg", alt: "", width: "100%" }
+            attrs: { src: "img/notfound.svg", alt: "", width: "80%" }
           })
         ])
       ])
